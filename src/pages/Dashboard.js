@@ -158,7 +158,7 @@ const Dashboard = () => {
               <thead>
                 <tr>
                   <th>Serial ID</th>
-                  <th>Name</th>
+                  <th>Company Name</th>
                   <th>Email</th>
                   <th>Phone</th>
                   <th>Status</th>
@@ -171,14 +171,14 @@ const Dashboard = () => {
                     key={entry.id}
                     style={{
                       backgroundColor:
-                        entry.status === "Active"
+                        entry.status === "active"
                           ? "#00ff003d"
-                          : entry.status === "Not in touch"
+                          : entry.status === "notintouch"
                           ? "#fff7003d"
-                          : entry.status === "Inactive"
+                          : entry.status === "inactive"
                           ? "#ff00003d"
                           : "#ffffffaf",
-                      color: entry.status !== "No contact" ? "white" : "black",
+                      color: entry.status !== "nocontact" ? "white" : "black",
                     }}
                   >
                     <td>{entry.serialId}</td>
@@ -190,10 +190,10 @@ const Dashboard = () => {
                         value={entry.status}
                         onChange={(e) => handleStatusChange(entry.id, e.target.value)}
                       >
-                        <option value="default">Default</option>
-                        <option value="completed">Completed</option>
-                        <option value="pending">Pending</option>
-                        <option value="success">Success</option>
+                        <option value="nocontact">Nocontact</option>
+                        <option value="active">Active</option>
+                        <option value="notintouch">Not in touch</option>
+                        <option value="inactive">Inactive</option>
                       </select>
                     </td>
                     <td>
