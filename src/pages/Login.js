@@ -67,7 +67,7 @@ const Login = () => {
   return (
     <div className="boxoffice" onClick={initializeAudioContext}>
       <div className="login-container">
-        <h1>Public Data Base</h1>
+        <h1>Corporate Data Base</h1>
         <h2>Login</h2>
 
         {/* Email Input */}
