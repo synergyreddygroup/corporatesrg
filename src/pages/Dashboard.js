@@ -122,7 +122,7 @@ const Dashboard = () => {
           <form onSubmit={handleSubmit}>
             <input
               type="text"
-              placeholder="Name"
+              placeholder="Company Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
@@ -171,14 +171,14 @@ const Dashboard = () => {
                     key={entry.id}
                     style={{
                       backgroundColor:
-                        entry.status === "completed"
+                        entry.status === "Active"
                           ? "#00ff003d"
-                          : entry.status === "pending"
+                          : entry.status === "Not in touch"
                           ? "#fff7003d"
-                          : entry.status === "success"
-                          ? "#ff00773d"
+                          : entry.status === "Inactive"
+                          ? "#ff00003d"
                           : "#ffffffaf",
-                      color: entry.status !== "default" ? "white" : "black",
+                      color: entry.status !== "No contact" ? "white" : "black",
                     }}
                   >
                     <td>{entry.serialId}</td>
